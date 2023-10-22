@@ -36,24 +36,17 @@ for intent in intents['intents']:
             classes.append(intent['tag'])
             stem_words = get_stem_words(words, ignore_words)
 
-print(stem_words)
-print(word_tags_list[0]) 
-print(classes)   
+# print(stem_words)
+# print(word_tags_list[0]) 
+# print(classes)   
 
 #Create word corpus for chatbot
 def create_bot_corpus(stem_words, classes):
 
-    stem_words = sorted(list(set(stem_words)))
-    classes = sorted(list(set(classes)))
+    
 
-    pickle.dump(stem_words, open('words.pkl','wb'))
-    pickle.dump(classes, open('classes.pkl','wb'))
+    # return stem_words, classes
 
-    return stem_words, classes
 
-stem_words, classes = create_bot_corpus(stem_words,classes)  
-
-print(stem_words)
-print(classes)
 
      
